@@ -1,7 +1,10 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
 [project]
-name = "end-to-end-advanced-rag-project-with-llmops"
+name = "multi_docs_chat"
 version = "0.1.0"
-description = "Add your description here"
-readme = "README.md"
-requires-python = ">=3.12"
-dependencies = []
+
+[tool.setuptools.packages.find]
+include = ["multi_docs_chat*"]
