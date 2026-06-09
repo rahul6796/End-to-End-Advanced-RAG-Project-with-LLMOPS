@@ -1,23 +1,25 @@
-python-dotenv==1.1.1
-structlog
+python-dotenv==1.0.1
+structlog==24.4.0
 
-langchain==0.3.27
-langchain-community==0.3.27
-langchain-core==0.3.72
+langchain==0.2.17
+langchain-community==0.2.19
+langchain-core==0.2.43
 
-langchain-groq==0.3.6
-langchain-google-genai==2.1.8
-langchain-openai==0.2.10
+langchain-groq==0.1.10
+langchain-google-genai==1.0.10
+langchain-openai==0.1.25
 
-docx2txt==0.9
-ipykernel==6.30.0
-python-multipart==0.0.20
-faiss-cpu
+docx2txt==0.8
+ipykernel==6.29.5
+python-multipart==0.0.12
 
-fastapi==0.115.6
-uvicorn==0.32.1
-Jinja2==3.1.4
+faiss-cpu==1.8.0.post1
 
-langsmith
-openai
-pandas
+fastapi
+uvicorn
+Jinja2
+
+langsmith==0.1.129
+openai==1.51.0
+
+pandas==2.2.3

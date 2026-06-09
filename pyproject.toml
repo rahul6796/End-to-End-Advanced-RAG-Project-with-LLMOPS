@@ -5,6 +5,11 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "multi_docs_chat"
 version = "0.1.0"
+dependencies = [
+    "fastapi>=0.136.3",
+    "langchain>=1.3.4",
+    "pypdf>=6.13.1",
+]
 
 [tool.setuptools.packages.find]
 include = ["multi_docs_chat*"]
