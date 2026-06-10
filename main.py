@@ -85,9 +85,15 @@ def health() -> Dict[str, str]:
 
 
 @app.get("/", response_class=HTMLResponse)
-def home(request: Request) -> HTMLResponse:
-    return templates.TemplateResponse("index.html", {"request": request})
+def home(request: Request):
 
+    return templates.TemplateResponse(
+        request,
+        "index.html",
+        {
+            "request": request
+        }
+    )
 
 @app.post("/upload", response_model=UploadResponse)
 async def upload(files: List[UploadFile] = File(...)) -> UploadResponse:
@@ -167,4 +173,4 @@ async def chat(req: ChatRequest) -> ChatResponse:
 # Uvicorn entrypoint for `python main.py` (optional)
 if __name__ == "__main__":
     import uvicorn
-    uvicorn.run("main:app", host="0.0.0.0", port=int(os.getenv("PORT", "8000")), reload=True)
+    uvicorn.run("main:app", host="127.0.0.1", port=int(os.getenv("PORT", "8000")), reload=True)
